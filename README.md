@@ -48,7 +48,7 @@ We used 70295 images of plant leaves for training the model, 17572 images for va
 
 <p align="center" style="text-align: center;">
     Sample dataset
-  <img src="images/data.png">
+  <img src="images/Data.png">
 </p>
 
 #### Model Description
