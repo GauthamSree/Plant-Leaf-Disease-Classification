@@ -1,0 +1,25 @@
+.footwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 3% 5%;
+    margin: 10% 4% 0% 4%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.byclass {
+    font-weight: bold;
+}
+

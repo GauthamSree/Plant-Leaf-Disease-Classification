@@ -1,0 +1,35 @@
+.Predwrapper {
+    display: flex;
+	flex-direction: row;
+    flex-flow: wrap;
+}
+
+.boxContainer {
+    width: 40%;
+    padding: 3%;
+    background: white;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+    border-radius: 17px;
+    text-align: center;
+    margin: 75px auto;
+}
+
+.classContainer1 {
+    display: flex;
+	justify-content: center; 
+	align-items: center;
+	flex-direction: row;
+    flex-flow: wrap;
+}
+
+.classContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+}
+
+.boxContainer .resultText {
+    font-size: 1.1em;
+    color: #84a0ed;
+    margin: 30px 30px 30px 5px;
+}

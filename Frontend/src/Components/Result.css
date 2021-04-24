@@ -1,0 +1,76 @@
+.box {
+    width: 60%;
+    padding: 50px;
+    background: white;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    text-align: center;
+    margin: 75px auto;
+}
+
+.box input {
+    border: 2px solid #3498db;
+    outline: none;
+    display: block;
+    margin: 30px auto;
+    text-align: left;
+    text-indent: 10px;
+    font-size: 12px;
+    padding: 12px 10px;
+    border-radius: 24px;
+    width: 70%;
+    transition : cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
+}
+
+.box input:focus {
+    width: 75%;
+    border-color: #2eee71;
+}
+
+.box button {
+    border: 2px solid #2eee71;
+    outline: none;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 13px; 
+    font-weight: bold;   
+    cursor: pointer;
+    padding: 12px 50px;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box button:hover {
+    background: #2eee71;
+}
+
+.box input[type='file'] {
+    text-indent: 2px;
+}
+
+.box input[type='file']:hover {
+    width: 75%;
+    border-color: #2eee71;
+}
+
+.box div label {
+    float: left;
+    font-size: 12px;
+    margin-left: 16%;
+    padding-bottom: 8px;
+}
+
+.box .field {
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	flex-direction: row;
+}
+
+.box .resultText {
+    font-size: 1.1em;
+    color: #84a0ed;
+    margin: 30px 30px 30px 5px;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.wrapper {
+	display: flex;
+  margin-top: 7%;
+	justify-content: center; 
+	align-items: center;
+	flex-direction: column;
+}
+
+.formContainer {
+	display: flex;
+  background: white;
+	justify-content: center; 
+	align-items: center;
+	flex-direction: column;
+  border-radius: 25px;
+  width: 60%;
+  height: 100%;
+  min-width: 400px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 5% 2% 0% 2%;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+	height: 50%;
+	width: 80%;
+  padding: 0% 0.5% 2% 0.5%;
+}
+
+.imageHolder {
+	display: flex;
+  align-items: center;
+  justify-content: center; 
+	flex-direction: row;
+  position: relative;
+  top:10%;
+  border-radius: 17px;
+  margin: 10px;
+  border: 2px dashed #c2cdda;
+	height: 450px;
+	width: 700px;
+}
+
+.wrapper img {
+  display: none;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.buttonContainer {
+	display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden;
+	width: 100%;
+}
+
+.buttonContainer button {
+  border: 2px solid #7e9beb;
+  outline: none;
+  background: #87a1e7;
+  position: relative;
+  display: absolute;
+  margin: 3% auto;
+  text-align: center;
+  font-size: 1rem; 
+  font-weight: bold;
+  color: #0d162e;  
+  cursor: pointer;
+  padding: 2% 4%; /* padding: 12px 50px; */
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.buttonContainer button:hover {
+  border-color: yellowgreen;
+  background: yellowgreen;
+}
+
+.wrapper #cancel-btn {
+  border: none;
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #84a0ed;
+  cursor: pointer;
+  display: none;
+  background: none;
+}
+
+.wrapper #imagespan {
+    font-size: 2rem;
+    color: #84a0ed;
+}
