@@ -1,46 +1,45 @@
-# Plant Disease Classification using Transfer Learning
+# Plant Leaf Disease Classification using PyTorch
 
-Plant disease classification model is made using fastai vision module. The classification is based on the leaf images. 
+## Abstract
+In this study, a model has been developed to classify plant diseases using leaf images of healthy and diseased plants.
+PyTorch was used to develop the model and the dataset used was PlantVillage (kaggle) dataset(<https://www.kaggle.com/vipoooool/new-plant-diseases-dataset>). The EfficientNet-b3 was the architecture used. 
+  
+We have used EfficientNet-b3 as our base model. To train this model, we used Pytorch, images from kaggle. We have used EarlyStopping callback to stop training when the validation loss is getting worse
 
 The classifer can classify on the following 38 classes:
-1. Apple___Apple_scab
-2. Apple___Black_rot
-3. Apple___Cedar_apple_rust
-4. Apple___healthy
-5. Blueberry___healthy
-6. Cherry_(including_sour)___Powdery_mildew
-7. Cherry_(including_sour)___healthy
-8. Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot
-9. Corn_(maize)___Common_rust
-10. Corn_(maize)___Northern_Leaf_Blight
-11. Corn_(maize)__healthy
-12. Grape___Black_rot
-13. Grape___Esca_(Black_Measles)
-14. Grape___Leaf_blight_(Isariopsis_Leaf_Spot)
-15. Grape___healthy
-16. Orange___Haunglongbing_(Citrus_greening)
-17. Peach___Bacterial_spot
-18. Peach___healthy
-19. Pepper,_bell___Bacterial_spot
-20. Pepper,_bell___healthy
-21. Potato___Early_blight
-22. Potato___Late_blight
-23. Potato___healthy
-24. Raspberry___healthy
-25. Soybean___healthy
-26. Squash___Powdery_mildew
-27. Strawberry___Leaf_scorch
-28. Strawberry___healthy
-29. Tomato___Bacterial_spot
-30. Tomato___Early_blight
-31. Tomato___Late_blight
-32. Tomato___Leaf_Mold
-33. Tomato___Septoria_leaf_spot
-34. Tomato___Spider_mites Two-spotted_spider_mite
-35. Tomato___Target_Spot
-36. Tomato___Tomato_Yellow_Leaf_Curl_Virus
-37. Tomato___Tomato_mosaic_virus
-38. Tomato___healthy
+1. Apple -- Apple Scab
+2. Apple -- Black Rot
+3. Apple -- Cedar Apple Rust
+4. Apple -- Healthy
+5. Cherry -- Powdery Mildew
+6. Cherry -- Healthy
+7. Corn -- Gray Leaf Spot (Cercospora Leaf Spot)
+8. Corn -- Common Rust
+9. Corn -- Northern Leaf Blight
+10. Corn -- Healthy
+11. Grape -- Black Rot
+12. Grape -- Esca (Black Measles)
+13. Grape -- Leaf Blight (Isariopsis Leaf Spot)
+14. Grape -- Healthy
+15. Peach -- Bacterial_spot
+16. Peach -- Healthy
+17. Pepper Bell -- Bacterial Spot
+18. Pepper Bell -- Healthy
+19. Potato -- Early Blight
+20. Potato -- Late Blight
+21. Potato -- Healthy
+22. Strawberry -- Leaf Scorch
+23. Strawberry -- Healthy
+24. Tomato -- Bacterial Spot
+25. Tomato -- Early Blight
+26. Tomato -- Late Blight
+27. Tomato -- Leaf Mold
+28. Tomato -- Septoria Leaf Spot
+29. Tomato -- Two-spotted Spider Mites
+30. Tomato -- Target Spot
+31. Tomato -- Yellow Leaf Curl Virus
+32. Tomato -- Mosaic Virus
+33. Tomato -- Healthy
 
 ## Methodology
 #### Dataset Description
@@ -52,13 +51,10 @@ We used 70295 images of plant leaves for training the model, 17572 images for va
 </p>
 
 #### Model Description
-We used a pretrained CNN model called ResNet34 for training(a.k.a transfer learning). Progessive resizing technique were applied on the images(128 x 128, 256 x 256 pixels).
+We used a pretrained CNN model called EfficientNet-b3 for training (a.k.a transfer learning)(Image Size: 256 x 256 pixels).
 
-#### Libraries 
-* Fastai vision
+#### Tech Stack 
 * Pytorch
-* numpy
-* pandas
 
 #### Performance
 We ran our experiment on train-validation set 80-20 split(80% of the whole dataset used for training, and 20% for validation). We compute the mean precision, mean recall, mean F1 score, along with the overall accuracy.
@@ -77,8 +73,7 @@ We got the following metrics:
 
 ## Summary
 To summarize,
-1. Choice of deep learning architecture: ResNet34.
-2. Choice of training mechanism: Transfer Learning.
+1. Choice of deep learning architecture: EfficientNet-b3.
 3. Choice of training-testing set distribution:
 Train: 80%, Validation: 20%
 

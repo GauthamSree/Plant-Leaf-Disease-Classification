@@ -20,8 +20,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = LeafModel(num_classes=38)
-model.load('models/EfficientNet_model2_onlyModel.pth', device='cpu')
+model = LeafModel(num_classes=33)
+model.load('models/Custom-EfficientNet_Model.pth', device='cpu')
 
 @app.get("/api")
 def index():

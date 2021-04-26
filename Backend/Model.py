@@ -274,9 +274,10 @@ class Model(nn.Module):
             with torch.no_grad():
                 out = self.predict_one_step(data, device)
                 final_out = torch.cat([final_out, out])
+            tk0.set_postfix(stage="Test")        
+        
         final_out = self.process_output(final_out)
         val = np.argmax(final_out, axis=1)
-            tk0.set_postfix(stage="Test")
         tk0.close()
         return final_out, val
 

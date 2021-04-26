@@ -5,12 +5,8 @@ const PredClasses = () =>  {
     return(
     <div className="Predwrapper">
         <div className="boxContainer">
-            <h3>Description</h3>
+            <h3>Materials And Methods</h3>
             <div> 
-                <p>
-                    This website can be used to predict plant disease (listed here). 
-                    This website uses a image classification model to predict the disease.
-                </p>
                 <p>
                     We have used EfficientNet-b3 as our base model. To train this model, 
                     we used Pytorch, images from kaggle. We have used EarlyStopping callback 
