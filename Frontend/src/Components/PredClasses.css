@@ -21,10 +21,18 @@
 	flex-direction: row;
     flex-flow: wrap;
 }
-
+@media only screen and (max-width: 700px) {
+    .classContainer {
+        --repeat: 1;
+    }
+    .boxContainer {
+        width: 80%;
+        margin: 75px auto 10px auto;
+    }    
+  }
 .classContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(var(--repeat, 2), 1fr);
     text-align: left;
 }
 

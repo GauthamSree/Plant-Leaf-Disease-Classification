@@ -63,10 +63,9 @@
 }
 
 .box .field {
-	display: flex;
-	justify-content: center; 
-	align-items: center;
-	flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(var(--repeat, 2), 1fr);
+    text-align: center;
 }
 
 .box .resultText {
@@ -74,3 +73,9 @@
     color: #84a0ed;
     margin: 30px 30px 30px 5px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .box .field {
+        --repeat: 1;
+    }
+  }

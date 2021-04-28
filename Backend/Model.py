@@ -269,7 +269,7 @@ class Model(nn.Module):
         self.model_state = 'test'
         self.eval()
         tk0 = tqdm(dataloader, total=len(dataloader))
-        final_out = torch.tensor([])
+        final_out = torch.tensor([]).to(device)
         for data in tk0:
             with torch.no_grad():
                 out = self.predict_one_step(data, device)

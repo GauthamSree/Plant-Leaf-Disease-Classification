@@ -23,6 +23,10 @@ app.add_middleware(
 model = LeafModel(num_classes=33)
 model.load('models/Custom-EfficientNet_Model.pth', device='cpu')
 
+@app.get("/")
+def home():
+    return {"message": "Serving Machine Learning Models"}
+
 @app.get("/api")
 def index():
     return {'message': 'Hello World!'}
@@ -43,9 +47,5 @@ def predict_api():
     testImg = random.choice(sample_images)
     return FileResponse("test_images/" + testImg)
 
-# 5. Run the API with uvicorn
-#    Will run on http://127.0.0.1:8000
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
-    
-#uvicorn main:app --reload
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)

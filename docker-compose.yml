@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build: Backend/
+    ports:
+      - 8000:8000
+    networks:
+      - plantleaf-app
+    container_name: plantbackend
+  frontend:
+    build: Frontend/
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    networks:
+      - plantleaf-app
+    container_name: plantfrontend
+networks:
+  plantleaf-app:
+    driver: bridge

@@ -1,12 +1,11 @@
 # Plant Leaf Disease Classification using PyTorch
 
 ## Abstract
-In this study, a model has been developed to classify plant diseases using leaf images of healthy and diseased plants.
-PyTorch was used to develop the model and the dataset used was PlantVillage (kaggle) dataset(<https://www.kaggle.com/vipoooool/new-plant-diseases-dataset>). The EfficientNet-b3 was the architecture used. 
-  
-We have used EfficientNet-b3 as our base model. To train this model, we used Pytorch, images from kaggle. We have used EarlyStopping callback to stop training when the validation loss is getting worse
+In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images, was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. A web application was developed where the user can upload the leaf image and predict the disease.
 
-The classifer can classify on the following 38 classes:
+## Method
+PlantVillage dataset contains 38 classes and 70295 images of 14 different plant species in total, 12 of which are healthy, 26 of which are diseased. In the present study, dataset of 9 plant species which have both healthy and diseased leaf images was used for training the model with transfer learning technique. The total number of images was 60930 for training and 15231 for validation. Augmentation method was applied to the dataset while training, to obtain different images for the diseases in each epoch. <br>
+The classifer can classify on the following 33 classes:
 1. Apple -- Apple Scab
 2. Apple -- Black Rot
 3. Apple -- Cedar Apple Rust
@@ -41,41 +40,30 @@ The classifer can classify on the following 38 classes:
 32. Tomato -- Mosaic Virus
 33. Tomato -- Healthy
 
-## Methodology
-#### Dataset Description
-We used 70295 images of plant leaves for training the model, 17572 images for validation and tested on 33 images.
-
 <p align="center" style="text-align: center;">
-    Sample dataset
-  <img src="images/Data.png">
+    Sample Train Dataset
+  <img src="images/Batch.png">
 </p>
+The augmentation techniques included random horizontal flip, vertical flip, rotation, cutout, etc. EfficientNet B3 architecture was the body of the newly developed model, while the head architecture of the model was custom made.  
+For training the model, cross entropy loss function and Adam optimizer with a learning rate of 3E-4 and Cosine Annealing Warm Restarts scheduler were used. The batch size was set to 32. Hardware set up used…..
+The training was done using the mixed precision functionality in PyTorch (torch.cuda.amp.GradScaler). The gradient scaling multiplies the network’s losses by a scale factor which helps to prevent underflow. Early Stopping callback was used to avoid overfitting of the model, which monitors performance of the loss value on validation split.
+A web application was developed to utilize the model which can be accessed by the end users. The Backend (RestAPI) of the website was developed using python library FastAPI and front end by ReactJS. The docker image can be created for the full stack website using Docker Compose nad use it in localhost.
+<br>
 
-#### Model Description
-We used a pretrained CNN model called EfficientNet-b3 for training (a.k.a transfer learning)(Image Size: 256 x 256 pixels).
 
-#### Tech Stack 
+## Tech Stack
 * Pytorch
+* ReactJS
+* FastAPI
+* Docker & Docker Compose
 
-#### Performance
-We ran our experiment on train-validation set 80-20 split(80% of the whole dataset used for training, and 20% for validation). We compute the mean precision, mean recall, mean F1 score, along with the overall accuracy.
-
-We got the following metrics:
-
+## Results
+A model was developed for the classification of plant leaf diseases using EfficientNet B3 deep learning architecture. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. 
 <p align="center" style="text-align: center;">
     Confusion Matrix
   <img src="images/ConfusionMatrix.png">
 </p>
-
-* Mean Precision - 99.568%
-* Mean Recall - 99.575%
-* Mean F1 score - 99.571%
-* Overall Accuracy - 99.579%
-
-## Summary
-To summarize,
-1. Choice of deep learning architecture: EfficientNet-b3.
-3. Choice of training-testing set distribution:
-Train: 80%, Validation: 20%
+The user can upload leaf images on the website to predict the plant disease using this model. Sample image can also be viewed and predicted.  
 
 ## Resources
 Dataset: <https://www.kaggle.com/vipoooool/new-plant-diseases-dataset> 
