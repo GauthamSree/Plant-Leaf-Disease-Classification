@@ -64,7 +64,7 @@ function App() {
     text.style.display = "block";
   }
 
-  const onSample = () => {
+  const onSample = async () => {
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')

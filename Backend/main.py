@@ -13,7 +13,7 @@ origins = [
     "https://gauthamsree.github.io/Plant-Leaf-Disease-Classification/",
     "https://gauthamsree.github.io/Plant-Leaf-Disease-Classification/#/",
     "https://plant-leaf-disease.herokuapp.com",
-    "http://localhost:3000",
+    "http://localhost:3000/Plant-Leaf-Disease-Classification/",
 ]
 
 app.add_middleware(
