@@ -43,7 +43,7 @@ function App() {
   }
   
   const onPredict = async (e) => {
-    axios.post('https://plant-disease-backend.herokuapp.com/api/predict', formData)
+    axios.post('https://plant-disease-backend.herokuapp.com/api/predict/', formData)
     .then((response) => {
       setPrediction(response.data)
       console.log(response.data)
@@ -68,7 +68,7 @@ function App() {
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
-    axios.get('https://plant-disease-backend.herokuapp.com/api/sample_image', { 
+    axios.get('https://plant-disease-backend.herokuapp.com/api/sample_image/', { 
       responseType: 'blob'
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
