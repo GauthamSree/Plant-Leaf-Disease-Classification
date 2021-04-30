@@ -8,11 +8,6 @@ from PlantDisease import *
 
 app = FastAPI()
 
-origins = [
-    "https://plant-leaf-disease.herokuapp.com",
-    "http://localhost:3000",
-]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=['*'],
@@ -39,7 +34,15 @@ async def predict_api(file: UploadFile = File(...)):
     confidence = "{:.2f}%".format(percentage)
     return {'Prediction': predicted_class, "Confidence" : str(confidence)}
 
-@app.get("/api/sample_image/")
+@app.get("/api/sample_image/", include_in_schema=False)
 def predict_api():
     testImg = random.choice(sample_images)
     return FileResponse("test_images/" + testImg)
+
+
+"""
+origins = [
+    "https://plant-leaf-disease.herokuapp.com",
+    "http://localhost:3000",
+]
+"""
