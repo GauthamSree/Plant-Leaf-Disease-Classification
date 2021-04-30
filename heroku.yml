@@ -1,6 +1,0 @@
-build:
-  docker:
-    web: Frontend/Dockerfile.front
-    api: Backend/Dockerfile.back
-run:
-  api: uvicorn main:app --host 0.0.0.0 --port $PORT

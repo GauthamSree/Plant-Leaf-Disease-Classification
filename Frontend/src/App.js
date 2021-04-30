@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   
   const instance = axios.create({
-    baseURL: process.env.baseURL || "http://0.0.0.0:8000/api"
+    baseURL: "https://plant-disease-backend.herokuapp.com/api"
   })
 
   const [prediction, setPrediction] = useState([])

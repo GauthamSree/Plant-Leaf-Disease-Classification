@@ -9,12 +9,13 @@ from PlantDisease import *
 app = FastAPI()
 
 origins = [
+    "https://plant-leaf-disease.herokuapp.com",
     "http://localhost:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=['*'],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -22,10 +23,6 @@ app.add_middleware(
 
 model = LeafModel(num_classes=33)
 model.load('models/Custom-EfficientNet_Model.pth', device='cpu')
-
-@app.get("/")
-def home():
-    return {"message": "Serving Machine Learning Models"}
 
 @app.get("/api")
 def index():
