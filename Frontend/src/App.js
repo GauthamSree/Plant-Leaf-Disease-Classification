@@ -43,7 +43,7 @@ function App() {
   }
   
   const onPredict = async (e) => {
-    instance.post('/api/predict/', formData)
+    instance.post('/predict/', formData)
     .then((response) => {
       setPrediction(response.data)
       console.log(response.data)
@@ -68,7 +68,7 @@ function App() {
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
-    instance.get('/api/sample_image/', { 
+    instance.get('/sample_image/', { 
       responseType: 'blob'
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
