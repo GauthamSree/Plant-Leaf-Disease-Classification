@@ -68,7 +68,7 @@ function App() {
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
-    axios.get('https://plant-disease-backend.herokuapp.com/sample_image', { 
+    axios.get('https://plant-disease-backend.herokuapp.com/api/sample_image', { 
       responseType: 'blob'
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
