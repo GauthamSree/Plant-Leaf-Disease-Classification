@@ -11,9 +11,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   
-  const instance = axios.create({
-    baseURL: "https://plant-disease-backend.herokuapp.com/api"
-  })
+  //const instance = axios.create({
+  //  baseURL: "https://plant-disease-backend.herokuapp.com/api"
+  //})
 
   const [prediction, setPrediction] = useState([])
   const [formData, setFileUploaded] = useState([])
@@ -43,7 +43,7 @@ function App() {
   }
   
   const onPredict = async (e) => {
-    instance.post('/predict', formData)
+    axios.post('https://plant-disease-backend.herokuapp.com/api/predict', formData)
     .then((response) => {
       setPrediction(response.data)
       console.log(response.data)
@@ -68,7 +68,7 @@ function App() {
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
-    instance.get('/sample_image', { 
+    axios.get('https://plant-disease-backend.herokuapp.com/sample_image', { 
       responseType: 'blob'
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
