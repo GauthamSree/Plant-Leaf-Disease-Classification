@@ -6,7 +6,7 @@ import FileUpload from './Components/FileUpload'
 import Result from './Components/Result'
 import PredClasses from './Components/PredClasses'
 import axios from "axios";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
