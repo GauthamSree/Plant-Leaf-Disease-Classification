@@ -46,6 +46,3 @@ async def predict_api(file: UploadFile = File(...)):
 def predict_api():
     testImg = random.choice(sample_images)
     return FileResponse("test_images/" + testImg)
-
-if __name__ == '__main__':
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
