@@ -13,6 +13,8 @@ services:
       - backend
     ports:
       - 3000:3000
+    env_file:
+      - .env
     networks:
       - plantleaf-app
     container_name: plantfrontend
