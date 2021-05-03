@@ -1,7 +1,7 @@
 # Plant Leaf Disease Classification using PyTorch
 
 ## Abstract
-In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images, was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. A web application was developed where the user can upload the leaf image and predict the disease.
+In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images, was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. A web application was developed where the user can upload the leaf image and predict the disease. (http://gauthamsree.github.io/Plant-Leaf-Disease-Classification)
 
 ## Method
 PlantVillage dataset contains 38 classes and 70295 images of 14 different plant species in total, 12 of which are healthy, 26 of which are diseased. In the present study, dataset of 9 plant species which have both healthy and diseased leaf images was used for training the model with transfer learning technique. The total number of images was 60930 for training and 15231 for validation. Augmentation method was applied to the dataset while training, to obtain different images for the diseases in each epoch. <br>
@@ -45,9 +45,9 @@ The classifer can classify on the following 33 classes:
   <img src="images/Batch.png">
 </p>
 The augmentation techniques included random horizontal flip, vertical flip, rotation, cutout, etc. EfficientNet B3 architecture was the body of the newly developed model, while the head architecture of the model was custom made.  
-For training the model, cross entropy loss function and Adam optimizer with a learning rate of 3E-4 and Cosine Annealing Warm Restarts scheduler were used. The batch size was set to 32. Hardware set up used…..
+For training the model, cross entropy loss function and Adam optimizer with a learning rate of 3E-4 and Cosine Annealing Warm Restarts scheduler were used. The batch size was set to 32.
 The training was done using the mixed precision functionality in PyTorch (torch.cuda.amp.GradScaler). The gradient scaling multiplies the network’s losses by a scale factor which helps to prevent underflow. Early Stopping callback was used to avoid overfitting of the model, which monitors performance of the loss value on validation split.
-A web application was developed to utilize the model which can be accessed by the end users. The Backend (RestAPI) of the website was developed using python library FastAPI and front end by ReactJS. The docker image can be created for the full stack website using Docker Compose nad use it in localhost.
+A web application was developed to utilize the model which can be accessed by the end users. The Backend (RestAPI) of the website was developed using python library FastAPI and front end by ReactJS. 
 <br>
 
 
@@ -55,7 +55,10 @@ A web application was developed to utilize the model which can be accessed by th
 * Pytorch
 * ReactJS
 * FastAPI
+* Heroku
+* GitHub Pages
 * Docker & Docker Compose
+
 
 ## Results
 A model was developed for the classification of plant leaf diseases using EfficientNet B3 deep learning architecture. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. 
@@ -63,7 +66,8 @@ A model was developed for the classification of plant leaf diseases using Effici
     Confusion Matrix
   <img src="images/ConfusionMatrix.png">
 </p>
-The user can upload leaf images on the website to predict the plant disease using this model. Sample image can also be viewed and predicted.  
+The user can upload leaf images on the website to predict the plant disease using this model. Sample image can also be viewed and predicted. 
+
 
 ## Resources
 Dataset: <https://www.kaggle.com/vipoooool/new-plant-diseases-dataset> 

@@ -14,13 +14,6 @@
     margin: 75px auto;
 }
 
-.classContainer1 {
-    display: flex;
-	justify-content: center; 
-	align-items: center;
-	flex-direction: row;
-    flex-flow: wrap;
-}
 @media only screen and (max-width: 700px) {
     .classContainer {
         --repeat: 1;
