@@ -8,16 +8,9 @@ from PlantDisease import *
 
 app = FastAPI()
 
-
-origins = [
-    "https://gauthamsree.github.io/Plant-Leaf-Disease-Classification/",
-    "https://gauthamsree.github.io/Plant-Leaf-Disease-Classification/#/",
-    "http://localhost:3000/Plant-Leaf-Disease-Classification/",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -46,4 +39,9 @@ def predict_api():
     testImg = random.choice(sample_images)
     return FileResponse("test_images/" + testImg)
 
-
+"""
+origins = [
+    "https://gauthamsree.github.io/Plant-Leaf-Disease-Classification/#/",
+    "http://localhost:3000/Plant-Leaf-Disease-Classification/",
+]
+"""

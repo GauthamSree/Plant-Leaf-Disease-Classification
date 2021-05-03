@@ -69,7 +69,11 @@ function App() {
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
     instance.get('/sample_image/', { 
-      responseType: 'blob'
+      responseType: 'blob',
+      headers: {
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache',
+        }
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
       let form = new FormData()
