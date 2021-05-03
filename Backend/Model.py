@@ -181,7 +181,7 @@ class Model(nn.Module):
         return losses.avg
     
     def validate_one_step(self, data, device='cuda'):
-        _, loss, metrics = self.model_fn(data) #acc = self.metrics(out, data[1])
+        _, loss, metrics = self.model_fn(data)
         return loss, metrics
     
     def validate_one_epoch(self, dataloader, device='cuda'):
@@ -237,7 +237,7 @@ class Model(nn.Module):
             train_collate_fn=train_collate_fn,
             valid_collate_fn=valid_collate_fn,
         )
-        self.train_state = 'on_train_begin' #self._cb_Handler('on_train_begin')
+        self.train_state = 'on_train_begin'
         for _ in range(epochs):
             self.train_state = 'on_epoch_begin'
             train_loss = self.train_one_epoch(self.train_loader, device=device)
