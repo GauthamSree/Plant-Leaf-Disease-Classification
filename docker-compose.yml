@@ -1,23 +1,23 @@
 version: "3.9"
 services:
   backend:
+    container_name: plantbackend
     build: Backend/
     ports:
       - 8000:8000
     networks:
       - plantleaf-app
-    container_name: plantbackend
   frontend:
+    container_name: plantfrontend
     build: Frontend/
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000/api
     depends_on:
       - backend
     ports:
       - 3000:3000
-    env_file:
-      - .env
     networks:
       - plantleaf-app
-    container_name: plantfrontend
 networks:
   plantleaf-app:
     driver: bridge

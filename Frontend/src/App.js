@@ -12,9 +12,9 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   
   const instance = axios.create({
-     baseURL: process.env.APIURL || "https://plant-disease-fastapi.herokuapp.com/api"
+     baseURL: process.env.REACT_APP_API_URL || "https://plant-disease-fastapi.herokuapp.com/api"
   })
-
+  
   const [prediction, setPrediction] = useState([])
   const [formData, setFileUploaded] = useState([])
   const noPrediction = !prediction || (prediction && prediction.length === 0)
@@ -71,9 +71,9 @@ function App() {
     instance.get('/sample_image/', { 
       responseType: 'blob',
       headers: {
-        'Cache-Control': 'no-cache',
+        'Cache-Control': 'no-store',
         'Pragma': 'no-cache',
-        }
+      }
     }).then((response) => {
       const file = new File([response.data], "image.jpg")
       let form = new FormData()
