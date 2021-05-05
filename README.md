@@ -1,7 +1,37 @@
 # Plant Leaf Disease Classification using PyTorch
 
 ## Abstract
-In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images, was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. A web application was developed where the user can upload the leaf image and predict the disease. (http://gauthamsree.github.io/Plant-Leaf-Disease-Classification)
+In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images, was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision respectively. A web application was developed where the user can upload the leaf image and predict the disease. (Try out: http://gauthamsree.github.io/Plant-Leaf-Disease-Classification)
+
+## Run Web App Locally
+Running locally with docker-compose, instant respose from the backend is possible(rather than waiting in case of Heroku(free tier)). Make sure you have installed Docker, docker-compose, and started docker engine.
+
+Step 1: 
+  * Clone this Repo and `cd` into the folder
+  * Code: `git clone https://github.com/GauthamSree/Plant-Leaf-Disease-Classification.git`
+
+Step 2:
+  * Run the following command to build the frontend and backend images run the web app with Docker Compose
+  * Code: `docker-compose up --build -d` 
+
+Step 3: 
+  * Goto http://localhost:3000/Plant-Leaf-Disease-Classification in your browser for interacting with the web app 
+
+Step 4: 
+  * Run the following command to stop the docker containers
+  * Code: `docker-compose down` 
+
+For deleting the Whole Web App<br>
+Step 1: 
+  * Deleting the docker containers
+  * Code: `docker rmi $(docker ps -a |  grep "plant-leaf-disease-classification_" | awk '{print $1}')` 
+
+Step 2: 
+  * Deleting the docker images
+  * Code: `docker rmi $(docker images -a |  grep "plant-leaf-disease-classification_" | awk '{print $3}')` 
+
+Step 3: 
+  * Delete the cloned folder.
 
 ## Method
 PlantVillage dataset contains 38 classes and 70295 images of 14 different plant species in total, 12 of which are healthy, 26 of which are diseased. In the present study, dataset of 9 plant species which have both healthy and diseased leaf images was used for training the model with transfer learning technique. The total number of images was 60930 for training and 15231 for validation. Augmentation method was applied to the dataset while training, to obtain different images for the diseases in each epoch. <br>
