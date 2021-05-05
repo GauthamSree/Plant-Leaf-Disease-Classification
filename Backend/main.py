@@ -19,7 +19,7 @@ app.add_middleware(
 model = LeafModel(num_classes=33)
 model.load('models/Custom-EfficientNet_Model.pth', device='cpu')
 
-@app.get("/api")
+@app.get("/api/")
 def index():
     return {'message': 'Hello World!'}
 

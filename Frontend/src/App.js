@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import FileUpload from './Components/FileUpload'
@@ -96,14 +96,6 @@ function App() {
     cancelBtn.style.display = "block";
     text.style.display = "none";
   }
-
-  useEffect(() => {
-    instance.get('/').then((response) => {
-      console.log(response.data)
-    }, (error) => {
-      console.log(error)
-    });
-  });
 
   return (
     <Router>
