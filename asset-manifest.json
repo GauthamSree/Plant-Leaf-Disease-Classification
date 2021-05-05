@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Plant-Leaf-Disease-Classification/static/css/main.4616812c.chunk.css",
-    "main.js": "/Plant-Leaf-Disease-Classification/static/js/main.0ea76ad2.chunk.js",
-    "main.js.map": "/Plant-Leaf-Disease-Classification/static/js/main.0ea76ad2.chunk.js.map",
+    "main.js": "/Plant-Leaf-Disease-Classification/static/js/main.ce68399a.chunk.js",
+    "main.js.map": "/Plant-Leaf-Disease-Classification/static/js/main.ce68399a.chunk.js.map",
     "runtime-main.js": "/Plant-Leaf-Disease-Classification/static/js/runtime-main.9dd160ff.js",
     "runtime-main.js.map": "/Plant-Leaf-Disease-Classification/static/js/runtime-main.9dd160ff.js.map",
     "static/js/2.b05e7294.chunk.js": "/Plant-Leaf-Disease-Classification/static/js/2.b05e7294.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9dd160ff.js",
     "static/js/2.b05e7294.chunk.js",
     "static/css/main.4616812c.chunk.css",
-    "static/js/main.0ea76ad2.chunk.js"
+    "static/js/main.ce68399a.chunk.js"
   ]
 }
