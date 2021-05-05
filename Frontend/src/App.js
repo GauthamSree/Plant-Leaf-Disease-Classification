@@ -59,6 +59,7 @@ function App() {
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
     imgBox.src = '';
+    imgBox.alt = "No file Uploaded";
     imgBox.style.display = "none";
     cancelBtn.style.display = "none";
     text.style.display = "block";
@@ -83,7 +84,8 @@ function App() {
       console.log(response.data)
     }, (error) => {
       console.log(error)
-    });    
+    });
+    imgBox.alt = "Backend not yet started";    
     imgBox.style.display = "block";
     cancelBtn.style.display = "block";
     text.style.display = "none";
