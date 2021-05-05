@@ -5,6 +5,7 @@ import Footer from './Components/Footer'
 import FileUpload from './Components/FileUpload'
 import Result from './Components/Result'
 import PredClasses from './Components/PredClasses'
+import Progress from './Components/Progress'
 import axios from "axios";
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ function App() {
   
   const [prediction, setPrediction] = useState([])
   const [formData, setFileUploaded] = useState([])
+  const [isPredicting, setIsPredicting] = useState(false)
   const noPrediction = !prediction || (prediction && prediction.length === 0)
   
   const onFileUpload = (e) => {
@@ -43,11 +45,14 @@ function App() {
   }
   
   const onPredict = async (e) => {
-    instance.post('/predict/', formData)
+    setIsPredicting(true)
+    instance.post('/predict/', formData, {timeout: 60 * 30 * 1000})
     .then((response) => {
+      setIsPredicting(false)
       setPrediction(response.data)
       console.log(response.data)
     }, (error) => {
+      document.getElementById("progress").innerHTML = "Response Timeout. Please Try Again";
       console.log(error)
     });
   }
@@ -55,6 +60,7 @@ function App() {
   const onCancelImage = () => {
     setFileUploaded([])
     setPrediction([])
+    setIsPredicting(false)
     const imgBox = document.getElementById('imageid')
     const text = document.getElementById('imagespan')
     const cancelBtn = document.getElementById('cancel-btn')
@@ -97,7 +103,7 @@ function App() {
     }, (error) => {
       console.log(error)
     });
-  }, []);
+  });
 
   return (
     <Router>
@@ -106,6 +112,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <FileUpload onPredict={onPredict} onFileUpload={onFileUpload} onCancelImage={onCancelImage} onSample={onSample} />
+            {isPredicting && <Progress />}
             {!noPrediction && <Result {...prediction}/>}
           </Route>
           <Route exact path="/prediction_classes">
