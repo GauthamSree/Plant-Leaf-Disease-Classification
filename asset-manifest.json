@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/Plant-Leaf-Disease-Classification/static/css/main.4616812c.chunk.css",
-    "main.js": "/Plant-Leaf-Disease-Classification/static/js/main.96f4c6de.chunk.js",
-    "main.js.map": "/Plant-Leaf-Disease-Classification/static/js/main.96f4c6de.chunk.js.map",
-    "runtime-main.js": "/Plant-Leaf-Disease-Classification/static/js/runtime-main.9dd160ff.js",
-    "runtime-main.js.map": "/Plant-Leaf-Disease-Classification/static/js/runtime-main.9dd160ff.js.map",
-    "static/js/2.b406506c.chunk.js": "/Plant-Leaf-Disease-Classification/static/js/2.b406506c.chunk.js",
-    "static/js/2.b406506c.chunk.js.map": "/Plant-Leaf-Disease-Classification/static/js/2.b406506c.chunk.js.map",
-    "static/js/3.6f573cc8.chunk.js": "/Plant-Leaf-Disease-Classification/static/js/3.6f573cc8.chunk.js",
-    "static/js/3.6f573cc8.chunk.js.map": "/Plant-Leaf-Disease-Classification/static/js/3.6f573cc8.chunk.js.map",
+    "main.css": "/Plant-Leaf-Disease-Classification/static/css/main.92fa9185.css",
+    "main.js": "/Plant-Leaf-Disease-Classification/static/js/main.9c46275f.js",
+    "static/js/787.f90c6429.chunk.js": "/Plant-Leaf-Disease-Classification/static/js/787.f90c6429.chunk.js",
     "index.html": "/Plant-Leaf-Disease-Classification/index.html",
-    "static/css/main.4616812c.chunk.css.map": "/Plant-Leaf-Disease-Classification/static/css/main.4616812c.chunk.css.map",
-    "static/js/2.b406506c.chunk.js.LICENSE.txt": "/Plant-Leaf-Disease-Classification/static/js/2.b406506c.chunk.js.LICENSE.txt"
+    "main.92fa9185.css.map": "/Plant-Leaf-Disease-Classification/static/css/main.92fa9185.css.map",
+    "main.9c46275f.js.map": "/Plant-Leaf-Disease-Classification/static/js/main.9c46275f.js.map",
+    "787.f90c6429.chunk.js.map": "/Plant-Leaf-Disease-Classification/static/js/787.f90c6429.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.9dd160ff.js",
-    "static/js/2.b406506c.chunk.js",
-    "static/css/main.4616812c.chunk.css",
-    "static/js/main.96f4c6de.chunk.js"
+    "static/css/main.92fa9185.css",
+    "static/js/main.9c46275f.js"
   ]
 }
