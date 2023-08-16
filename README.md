@@ -1,10 +1,10 @@
 # Plant Leaf Disease Classification using PyTorch
 
 ## Abstract
-In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision, respectively. A web application was developed where the user can upload the leaf image and predict the disease. (Try out: https://gauthamsree.github.io/Plant-Leaf-Disease-Classification)
+In this study, a model was developed for the classification of plant leaf diseases from the leaf images using EfficientNet B3 deep learning architecture. The datasets having 60930 images was used to train the models using transfer learning approach. The results of the study showed that the model achieved 99.875%, 99.871% and 99.874% accuracy, recall and precision, respectively. A web application was developed where the user can upload the leaf image and predict the disease. (Try out: https://gauthamsree.github.io/Plant-Leaf-Disease-Classification, [Expect delay: since backend is deployed on Render(free tier)])
 
 ## Run Web App Locally
-Running locally with docker-compose, instant respose from the backend is possible(rather than waiting in case of Heroku (free tier)). Make sure you have installed Docker, docker-compose, and started docker engine.
+Running locally with docker-compose, instant respose from the backend is possible(rather than waiting in case of Render (free tier)). Make sure you have installed Docker, docker-compose, and started docker engine.
 
 Step 1: 
   * Clone this Repo and `cd` into the folder
@@ -85,7 +85,7 @@ A web application was developed to utilize the model which can be accessed by th
 * Pytorch
 * ReactJS
 * FastAPI
-* Heroku
+* Render
 * GitHub Pages
 * Docker & Docker Compose
 
